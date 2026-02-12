@@ -1,34 +1,44 @@
-# 📊 Análise de Satisfação de Clientes - E-commerce Olist
+Análise de Satisfação de Clientes - E-commerce Olist
+Este projeto apresenta uma Análise Exploratória de Dados (EDA) fundamentada no conjunto de dados público da Olist. O foco central da investigação é identificar e quantificar os fatores logísticos e operacionais que impactam diretamente a percepção de valor e a satisfação do consumidor final.
 
-Este projeto é uma Análise Exploratória de Dados (EDA) do [dataset público de e-commerce da Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce), focado em entender os fatores que mais impactam a satisfação dos clientes.
+Como entrega técnica, foi desenvolvido um dashboard interativo utilizando Streamlit, permitindo a exploração de indicadores de performance (KPIs) e a filtragem de métricas de entrega e avaliações em tempo real.
 
-O resultado final é um dashboard interativo construído com **Streamlit**, que permite a um gestor de negócios visualizar e filtrar os principais indicadores de performance (KPIs) relacionados às entregas e avaliações.
+Objetivos da Análise
+A análise foi estruturada para solucionar problemas de negócio e extrair insights sobre os seguintes pontos:
 
-Este projeto foi desenvolvido como parte do meu portfólio de Análise de Dados.
+Impacto Logístico: Correlação estatística entre o tempo de transporte e a pontuação atribuída pelo cliente.
 
-## 🚀 Demonstração do Dashboard
+Gestão de Expectativas: Análise comparativa do impacto de pedidos entregues fora do prazo estimado nas notas de avaliação.
 
-[RECOMENDADO: Tire um screenshot do seu dashboard pronto e insira aqui!]
+Performance por Categoria: Identificação de clusters de produtos com desempenho crítico em termos de satisfação.
 
-![Exemplo do Dashboard]([](https://webdashboard-vendas-wq8q4rsgqfsti9wxzibkpf.streamlit.app/)
+Geolocalização e Logística: Mapeamento da distribuição de pedidos e análise de lead time médio segmentado por região e estado.
 
-## 🎯 Objetivos da Análise
+Tecnologias e Ferramentas
+O projeto utiliza uma stack moderna de ciência de dados para garantir escalabilidade e reprodutibilidade:
 
-O objetivo principal é responder a perguntas de negócio críticas para um e-commerce, como:
+Linguagem: Python
 
-* Qual é a correlação entre o tempo de entrega e a nota de avaliação (review) do cliente?
-* Pedidos entregues com atraso (após a data estimada) recebem avaliações significativamente piores?
-* Quais categorias de produtos possuem as piores e melhores médias de avaliação?
-* Qual é a distribuição geográfica dos pedidos e como a logística impacta a satisfação em diferentes estados?
-* Qual é o tempo médio de *lead time* (tempo da compra até a entrega) por região?
+Processamento de Dados: Pandas para limpeza, transformação e agregação de grandes volumes de dados.
 
-## 🛠️ Tecnologias e Ferramentas Utilizadas
+Visualização: Plotly para gráficos dinâmicos e interativos.
 
-* **Linguagem:** Python 3.10
-* **Análise e Manipulação de Dados:** Pandas
-* **Visualização de Dados:** Plotly (ou Matplotlib/Seaborn)
-* **Dashboard Interativo:** Streamlit
-* **Ambiente de Desenvolvimento:** VS Code com Dev Containers (conforme visto no repo `.devcontainer`)
-* **Controle de Versão:** Git e GitHub
+Interface: Streamlit para a disponibilização da ferramenta de BI em ambiente web.
 
-## 📂 Estrutura do Repositório
+Infraestrutura: Docker (Dev Containers) para padronização do ambiente de desenvolvimento.
+
+Estrutura do Repositório
+data/: Diretório reservado para os arquivos brutos e processados (conforme política de armazenamento do projeto).
+
+notebooks/: Arquivos Jupyter contendo o passo a passo da limpeza de dados e análise exploratória inicial.
+
+src/: Código-fonte da aplicação Streamlit e scripts de processamento.
+
+config/: Arquivos de configuração do ambiente e dependências (requirements.txt ou .devcontainer).
+
+Metodologia de Execução
+Tratamento de Dados: Unificação das diversas tabelas do dataset (pedidos, itens, pagamentos e avaliações) via chaves primárias.
+
+Engenharia de Atributos: Criação de métricas como "Tempo de Entrega Real" e "Diferença da Data Estimada".
+
+Desenvolvimento do Dashboard: Integração dos insights gerados em uma interface funcional para tomada de decisão.
